@@ -4,12 +4,8 @@ import { useSelector } from "react-redux";
 import CardSlider from "../components/CardSlider";
 import Navbar from "../components/Navbar";
 import axios from "axios";
-import { API_KEY, TMDB_BASE_URL } from "../utils/constants"; // vérifie ce fichier
-import background from "../assets/background.jpg"; // background comme Movies
-import youtube_icon from '../assets/youtube_icon.png'
-import twitter_icon from '../assets/x_icon.jpg'
-import instagram_icon from '../assets/instagram_icon.png'
-import facebook_icon from '../assets/facebook_icon.png'
+import { API_KEY, TMDB_BASE_URL } from "../utils/constants"; 
+import background from "../assets/background.jpg"; 
 import styled from 'styled-components';
 import Footer from '../components/Footer';
 

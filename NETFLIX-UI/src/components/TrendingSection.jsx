@@ -25,7 +25,6 @@ import abandonedmanMore from "../assets/more/abandoned_man.jpg";
 import moneyheistMore from "../assets/more/money_heist.jpg";
 import thedayofthejackalMore from "../assets/more/the_day_of_the_jackal.jpg";
 
-// ==================== COMPOSANT MODAL SERIE ====================
 const SeriesModal = ({ series, isOpen, onClose }) => {
   if (!isOpen || !series) return null;
 
@@ -62,14 +61,12 @@ const SeriesModal = ({ series, isOpen, onClose }) => {
   );
 };
 
-// ==================== COMPOSANT TRENDING SECTION ====================
 const TrendingSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [selectedSeries, setSelectedSeries] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [openFaq, setOpenFaq] = useState(null);
 
-  // Données des films/séries trending
   const trendingItems = [
     {
       id: 1,
@@ -283,12 +280,10 @@ const TrendingSection = () => {
   return (
     <>
       <TrendingContainer>
-        {/* Trending Now Section */}
         <div className="trending-section">
           <h2 className="trending-title">Trending Now</h2>
           
           <div className="carousel-container">
-            {/* Navigation Arrows */}
             <button onClick={prevSlide} className="nav-arrow nav-arrow-left">
               <svg className="arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <polyline points="15,18 9,12 15,6"></polyline>
@@ -301,7 +296,6 @@ const TrendingSection = () => {
               </svg>
             </button>
 
-            {/* Trending Items Grid */}
             <div className="trending-grid">
               {getVisibleItems().map((item, index) => (
                 <div 
@@ -309,23 +303,19 @@ const TrendingSection = () => {
                   className="trending-item"
                   onClick={() => handleSeriesClick(item)}
                 >
-                  {/* Rank Number */}
                   <div className="rank-number">
                     {item.rank}
                   </div>
 
-                  {/* Movie Poster */}
                   <div className="poster-container">
                     <img src={item.image} alt={item.title} className="poster-image" />
                     
-                    {/* Netflix Logo */}
                     <div className="netflix-logo">N</div>
                   </div>
                 </div>
               ))}
             </div>
 
-            {/* Slide Indicators */}
             <div className="slide-indicators">
               {Array.from({ length: Math.ceil(trendingItems.length / 5) }, (_, index) => (
                 <button
@@ -338,7 +328,6 @@ const TrendingSection = () => {
           </div>
         </div>
 
-        {/* More Reasons to Join Section */}
         <div className="reasons-section">
           <h2 className="reasons-title">More Reasons to Join</h2>
           
@@ -357,7 +346,6 @@ const TrendingSection = () => {
           </div>
         </div>
 
-        {/* FAQ Section */}
         <div className="faq-section">
           <h2 className="faq-title">Frequently Asked Questions</h2>
           
@@ -382,7 +370,6 @@ const TrendingSection = () => {
         </div>
       </TrendingContainer>
 
-      {/* Modal de présentation */}
       <SeriesModal 
         series={selectedSeries}
         isOpen={isModalOpen}
@@ -394,7 +381,6 @@ const TrendingSection = () => {
 
 export default TrendingSection;
 
-// ==================== STYLES POUR LA TRENDING SECTION ==================== 
 const TrendingContainer = styled.div`
   background-color: black;
   color: white;

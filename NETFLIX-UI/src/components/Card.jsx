@@ -59,19 +59,7 @@ return (
       <img src={`https://image.tmdb.org/t/p/w500${movieData.image}`} alt={movieData.name} />
       {isHovered && (
         <div className="hover">
-          {/* <div className="image-video-container">
-            {trailerUrl ? (
-              <iframe
-                src={trailerUrl}
-                title="Trailer"
-                frameBorder="0"
-                allow="autoplay; encrypted-media"
-                allowFullScreen
-              />
-            ) : (
-              <img src={`https://image.tmdb.org/t/p/w500${movieData.image}`} alt={movieData.name} onClick={handleClick} />
-            )}
-          </div> */}
+          
           <div className="image-video-container">
             {trailerUrl ? (
               <iframe

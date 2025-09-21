@@ -10,7 +10,6 @@ import UserLiked from './pages/UserLiked'
 import Search from "./pages/Search";
 
 
-
 const App = () => {
   return (
     <BrowserRouter>
