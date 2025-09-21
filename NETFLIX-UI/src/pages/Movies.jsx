@@ -53,7 +53,7 @@ function MoviePage() {
 
   return (
   <Container>
-    <div className="background"></div>   {/* ✅ nouvelle div pour l’image */}
+    <div className="background"></div> 
     <Navbar isScrolled={isScrolled} />
     <div className="data">
       <SelectGenre genres={genres} type="movie" />
@@ -71,13 +71,13 @@ const Container = styled.div`
   overflow : hidden;
   
   .background{
-    position: fixed;   /* ✅ l’image reste en place */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background: url(${background}) no-repeat center center/cover;
-    z-index: -1;       /* ✅ derrière tout le reste */
+    z-index: -1; 
   }
 
   .data {
